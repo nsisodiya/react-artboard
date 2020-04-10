@@ -12,18 +12,62 @@
 .zoomableContainer {
   border: 1px solid green;
   margin: 3px;
-  padding: 3px;
+  padding: 0px;
   overflow: scroll;
   flex: 1;
 }
 
+.zoom {
+  transform: scale(1.05);
+  left: 144px;
+  top: 78px;
+}
+
 .infiniteCanvas {
   overflow: hidden;
-  width: 5760px;
-  height: 3240px;
-  background-color: greenyellow;
+  /* width: 5760px;
+  height: 3240px; */
+  width: 2200px;
+  height: 1200px;
+
+  background-color: #d0cbe6;
+  position: relative;
 }
 .container .heading {
   font-size: 2em;
   text-align: center;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1.2em;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid red;
+  border-left: 0.3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+}
+.star:before,
+.star:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0.6em;
+  left: -1em;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid red;
+  border-left: 1em solid transparent;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+.star:after {
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
 }
